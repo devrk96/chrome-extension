@@ -1,0 +1,37 @@
+{
+    "name": "Article Saver",
+    "version": "1.0.0",
+    "description": "Extension to save your links or articles",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon1.png",
+            "48": "icon2.png",
+            "128": "icon3.png"
+        }
+    },
+    "icons": {
+        "16": "icon1.png",
+        "48": "icon2.png",
+        "128": "icon3.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
